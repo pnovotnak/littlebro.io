@@ -12,11 +12,3 @@ source env/bin/activate
 # install dependencies
 pip install --download-cache ~/.pip-cache --allow-external PIL --upgrade --use-mirrors -r requirements.txt
 
-if [ ! -f "$_PATH/local_settings.py" ]; then
-    echo "
-Copying default local settings
-"
-    cp "$_PATH/local_settings-template.py" "$_PATH/local_settings.py"
-fi
-
-
