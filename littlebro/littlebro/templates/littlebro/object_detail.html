@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ object.verbose_name }}{% endblock %}
+
+{% block content %}
+  {# Breadcrumbs #}
+  <span>
+    <a href="/{{ object.urlized_verbose_name_plural }}">back to {{ object.verbose_name }} list</a>
+  </span>
+
+  {% for name, value in object.get_fields %}
+      <p>
+        <label>{{ name }}:</label>
+        <span>{{ value|default:"Not available" }}</span>
+      </p>
+  {% endfor %}
+  {# Show the object's rating #}
+  <p>
+    <label>Rating:</label>
+    {% if object.rating %}
+      <span>{{ object.rating }}</span>
+    {% else %}
+      <span><a href="{{ object.get_absolute_url }}/rate">not yet rated.</a></span>
+    {% endif %}
+  </p>
+{% endblock %}

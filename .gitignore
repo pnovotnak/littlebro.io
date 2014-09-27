@@ -1,0 +1,22 @@
+#
+# Python things
+#
+
+*.pyc
+env/
+
+#
+# Site specific settings
+#
+
+local_settings.py
+
+#
+# Databases
+#
+
+.DS_Store
+*.sqlite
+*.sqlite3
+*.db
+

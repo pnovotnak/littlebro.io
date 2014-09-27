@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ object_name }} List{% endblock %}
+
+{% block content %}
+  {% if object_list %}
+  <ul>
+    {% for object in object_list %}
+      <li>
+        <label><a href="{{ object.urlized_verbose_name_plural }}/{{ object.id }}">
+          {{ object.name }}</a>:
+        </label>
+        <span {% if object.rating %}class="star star-s" style="width: {{ object.rating_star_display }}px;">
+              {% else %}>not yet rated{% endif %}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>No {{ object.verbose_name_plural }} in the system yet. Care to
+      <a href="{{ object.urlized_verbose_name_plural }}/add">create one?</a>
+    </p>
+  {% endif %}
+{% endblock %}
