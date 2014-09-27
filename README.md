@@ -1,4 +1,4 @@
-# LittleBro.io     ![Build Status](https://travis-ci.org/pnovotnak/littlebro.io/builds/36460824#)
+# LittleBro.io     ![Build Status](https://travis-ci.org/pnovotnak/littlebro.io.svg)
 
 This is the source code for the LittleBro.io website.
 
