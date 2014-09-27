@@ -10,6 +10,7 @@ env/
 #
 
 local_settings.py
+secret.txt
 
 #
 # Databases
@@ -19,4 +20,10 @@ local_settings.py
 *.sqlite
 *.sqlite3
 *.db
+
+#
+# Editor configurations
+#
+
+.idea/
 

@@ -1,0 +1,26 @@
+[
+{
+    "fields": {
+        "domain": "executive.littlebro.io",
+        "name": "Executive Site"
+    },
+    "model": "sites.site",
+    "pk": 1
+},
+{
+    "fields": {
+        "domain": "judicial.littlebro.io",
+        "name": "Judicial Site"
+    },
+    "model": "sites.site",
+    "pk": 2
+},
+{
+    "fields": {
+        "domain": "legislature.littlebro.io",
+        "name": "Legislative Site"
+    },
+    "model": "sites.site",
+    "pk": 3
+}
+]
