@@ -1,4 +1,4 @@
 language: python
 python: "2.7"
 install: bash ./setup.sh
-script: python ./littlebro/manage.py test littlebro
+script: source env/bin/activate && python ./littlebro/manage.py test littlebro
