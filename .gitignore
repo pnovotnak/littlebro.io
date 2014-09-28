@@ -31,5 +31,8 @@ secret.txt
 # Static and media files
 #
 
-static/
-media/
+./static/
+./media/
+
+./littlebro/static/
+./littlebro/media/
