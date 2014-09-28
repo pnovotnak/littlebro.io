@@ -1,10 +1,13 @@
 import random
 
+from django.views.generic import TemplateView
 from django.contrib import admin
 from django.conf.urls import patterns, include, url
 
 from littlebro import views
 from recaptcha.forms import CaptchaLoginForm
+
+handler404 = TemplateView.as_view(template_name="404.html")
 
 admin.site.login_form = CaptchaLoginForm
 admin.site.login_template = 'admin/grappelli-captcha-login.html'
