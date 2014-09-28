@@ -119,3 +119,9 @@ except NameError:
         except IOError:
             Exception('Please create a %s file with random characters \
             to generate your secret key!' % SECRET_FILE)
+
+
+try:
+    from base_local import *
+except ImportError:
+    pass
