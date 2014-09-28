@@ -27,3 +27,9 @@ secret.txt
 
 .idea/
 
+#
+# Static and media files
+#
+
+static/
+media/
