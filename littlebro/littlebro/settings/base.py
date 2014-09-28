@@ -11,7 +11,12 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'littlebro.io',
+    'executive.littlebro.io',
+    'legislative.littlebro.io',
+    'judicial.littlebro.io',
+]
 
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
