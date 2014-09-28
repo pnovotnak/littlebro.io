@@ -1,6 +1,7 @@
 Django>=1.7,<1.8
-django-recaptcha
 django-ckeditor
+django-grappelli
 django-smuggler
+django-recaptcha
 psycopg2
 wsgiref==0.1.2
