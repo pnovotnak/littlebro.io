@@ -7,7 +7,7 @@ from littlebro import views
 from recaptcha.forms import CaptchaLoginForm
 
 admin.site.login_form = CaptchaLoginForm
-admin.site.login_template = 'admin/captcha-login.html'
+admin.site.login_template = 'admin/grappelli-captcha-login.html'
 admin.site.site_header = (
     'LittleBro.io Administration'
 )
