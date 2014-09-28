@@ -75,6 +75,8 @@
                             <p class="grp-description" style="font-size: 11px; line-height: 13px; margin-top: 2px;"><a href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a></p>
                         </div>
                     {% endif %}
+                    {{ form.captcha }}
+                    {{ form.captcha.errors }}
                 </div>
             </fieldset>
             <div class="grp-module grp-submit-row">

@@ -7,4 +7,4 @@ class CaptchaLoginForm(AuthenticationForm):
     """
     Extends the login form to include a captcha field
     """
-    captcha = ReCaptchaField(attrs={'theme': 'white'})
+    captcha = ReCaptchaField(attrs={'theme': 'clean'})
