@@ -4,26 +4,23 @@ from django.contrib import admin
 from django.conf.urls import patterns, include, url
 
 from littlebro import views
+from recaptcha.forms import CaptchaLoginForm
 
-admin.autodiscover()
-admin.site.site_header = 'LittleBro.io Administration'
-admin.site.index_title = random.choice((
-    'Who watches the watchmen?',
-    'With great power comes great responsibility'
-))
+admin.site.login_form = CaptchaLoginForm
+admin.site.login_template = 'admin/captcha-login.html'
+admin.site.site_header = (
+    'LittleBro.io Administration'
+)
 
-
-police_officer_patterns = patterns('',
-    url(r'^$', views.PoliceOfficerList.as_view()),
-    url(r'^add/?$', views.PoliceOfficerCreate.as_view()),
-    url(r'^(?P<pk>[0-9]+)/?$', views.PoliceOfficerDetail.as_view()),
+super_admin = patterns('',
+    (r'^', include('smuggler.urls')),  # before admin url patterns!
+    url(r'^', include(admin.site.urls)),
 )
 
 urlpatterns = patterns('',
-    url(r'^admin/', include(admin.site.urls)),
+    (r'^grappelli/', include('grappelli.urls')), # grappelli URLS
 
-    # Model URLs
-    url(r'^police-officers/?', include(police_officer_patterns)),
+    (r'^admin/', include(super_admin)),
 
     (r'^ckeditor/', include('ckeditor.urls')),
 )

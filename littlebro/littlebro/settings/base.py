@@ -29,6 +29,7 @@ CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.j
 # Application definition
 
 INSTALLED_APPS = (
+    'grappelli', # Keep this here
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,9 +40,11 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
 
     # 3rd party
+    'captcha',
     'ckeditor',
 
     'littlebro',
+    'recaptcha',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -104,6 +107,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Media files (Uploads)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+RECAPTCHA_USE_SSL = True
+RECAPTCHA_PUBLIC_KEY = '6LeIDPsSAAAAAB7v6kh3b9TXWTnWB7ESlrgtSf7u'
+RECAPTCHA_PRIVATE_KEY = '6LeIDPsSAAAAACYSU0rjXY36fjiiNMHNVjZaO42o'
 
 try:
     SECRET_KEY

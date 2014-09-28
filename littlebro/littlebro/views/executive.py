@@ -1,17 +1,21 @@
 from django.views.generic.edit import CreateView
 
-from littlebro.models import PoliceOfficer
+from littlebro.models import Police
 
 from generic import ModelCreate, ModelList, ModelDetail
 
 
-class PoliceOfficerCreate(ModelCreate):
-    model = PoliceOfficer
+class PoliceMixin(object):
+    model = Police
 
 
-class PoliceOfficerList(ModelList):
-    model = PoliceOfficer
+class PoliceOfficerCreate(ModelCreate, PoliceMixin):
+    pass
 
 
-class PoliceOfficerDetail(ModelDetail):
-    model = PoliceOfficer
+class PoliceOfficerList(ModelList, PoliceMixin):
+    pass
+
+
+class PoliceOfficerDetail(ModelDetail, PoliceMixin):
+    pass
