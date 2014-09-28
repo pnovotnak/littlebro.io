@@ -1,5 +1,7 @@
 RATING_STAR_WIDTH = 13.5
 
+SITE_ID = 1
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), '..')
