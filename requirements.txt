@@ -3,5 +3,6 @@ django-ckeditor
 django-grappelli
 django-smuggler
 django-recaptcha
+Pillow
 psycopg2
 wsgiref==0.1.2
