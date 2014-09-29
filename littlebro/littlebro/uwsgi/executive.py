@@ -1,5 +1,5 @@
 """
-WSGI config for littlebro project.
+WSGI config for executive domain of the littlebro project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
