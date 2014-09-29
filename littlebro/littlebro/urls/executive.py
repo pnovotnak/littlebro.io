@@ -12,5 +12,5 @@ police_officer_patterns = patterns('',
 
 urlpatterns += patterns('',
     # Model URLs
-    url(r'^police-officers/?', include(police_officer_patterns)),
+    url(r'^police/?', include(police_officer_patterns)),
 )
